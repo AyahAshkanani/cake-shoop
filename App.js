@@ -1,21 +1,31 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
 
+
+import { NativeBaseProvider } from "native-base";
+
+//components
+import Home from "./components/Home";
+import BakeryList from "./components/bakery/BakeryList";
+import BakeryDetail from "./components/bakery/BakeryDetail";
+
+//styles
+import { ThemeProvider } from "styled-components";
+
+const theme = {
+  mainColor: "#293241",
+  backgroundColor: "#e0fbfc",
+  pink: "#f283a2",
+  red: "red",
+};
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NativeBaseProvider>
+      <ThemeProvider theme={theme}>
+        {/* <Home /> */}
+        {/* <BakeryList /> */}
+        <BakeryDetail />
+      </ThemeProvider>
+    </NativeBaseProvider>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
