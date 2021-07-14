@@ -3,13 +3,13 @@ import React from "react";
 
 import { NativeBaseProvider } from "native-base";
 
-//components
-import Home from "./components/Home";
-import BakeryList from "./components/bakery/BakeryList";
-import BakeryDetail from "./components/bakery/BakeryDetail";
-
 //styles
 import { ThemeProvider } from "styled-components";
+
+//navigation
+import { NavigationContainer } from "@react-navigation/native";
+import RootNavigator from "./components/Navigation/index";
+
 
 const theme = {
   mainColor: "#293241",
@@ -21,9 +21,9 @@ export default function App() {
   return (
     <NativeBaseProvider>
       <ThemeProvider theme={theme}>
-        {/* <Home /> */}
-        {/* <BakeryList /> */}
-        <BakeryDetail />
+        <NavigationContainer>
+          <RootNavigator />
+        </NavigationContainer>
       </ThemeProvider>
     </NativeBaseProvider>
   );

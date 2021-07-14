@@ -14,10 +14,10 @@ import bakeryStore from "../../stores/bakeryStore";
 
 //styles
 import { ListWrapper } from "./styles";
-const BakeryList = () => {
+const BakeryList = ({navigation}) => {
   if (bakeryStore.loading) return <Spinner />;
   const bakeryList = bakeryStore.bakeries.map((bakery) => (
-    <BakeryItem bakery={bakery} key={bakery.id} />
+    <BakeryItem bakery={bakery} key={bakery.id} navigation={navigation} />
   ));
 
   return (

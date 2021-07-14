@@ -7,7 +7,7 @@ import { HomeBackground, Title ,TopStyling, OverLayContainer,BottomStyling, Butt
 // import { View, Text } from "react-native";
 
 
-const Home = () => {
+const Home = ({ navigation }) => {
   return <HomeBackground style={{ flex: 1, width: "100%", height: "20%" }}
   source={{
     uri:
@@ -21,7 +21,8 @@ const Home = () => {
       Sinful
     </Title></TopStyling>
     <BottomStyling>
-   <ButtonStyled onPress={() => alert("I want sweets")}>Click here to skip</ButtonStyled>
+   <ButtonStyled onPress={() =>  navigation.navigate("BakeryList")}>Click here to buy
+   </ButtonStyled>
  </BottomStyling> 
     </OverLayContainer> 
   </HomeBackground>

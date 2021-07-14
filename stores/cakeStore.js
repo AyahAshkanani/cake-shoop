@@ -1,5 +1,6 @@
 import { makeAutoObservable } from "mobx";
 import instance from "./instance";
+import axios from "axios";
 
 class CakeStore {
   cakes = [];
@@ -11,7 +12,7 @@ class CakeStore {
 
   fetchCakes = async () => {
     try {
-      const response = await instance.get("/cakess");
+      const response = await instance.get("/cakes");
       this.cakes = response.data;
       this.loading = false;
     } catch (error) {
@@ -27,3 +28,6 @@ const cakeStore = new CakeStore();
 cakeStore.fetchCakes();
 
 export default cakeStore;
+
+
+
