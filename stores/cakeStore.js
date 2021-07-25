@@ -1,6 +1,5 @@
 import { makeAutoObservable } from "mobx";
 import instance from "./instance";
-import axios from "axios";
 
 class CakeStore {
   cakes = [];
@@ -20,8 +19,9 @@ class CakeStore {
     }
   };
 
-  getCakeById = (cakeId) =>
-    this.cakes.find((cake) => cake.id === cakeId);
+  getCakeById = (cakeId) =>{
+    return this.cakes.find((cake) => cake.id === +cakeId);
+  }
 }
 
 const cakeStore = new CakeStore();
