@@ -13,7 +13,7 @@ const CartButton = () => {
   const navigation = useNavigation();
   return (
     <Button>
-    <CartButtonStyled name="shopping-cart" size={24} color="white" onPress={() => navigation.navigate("CartList")}/>
+    <CartButtonStyled name="shopping-cart" size={24} color="white" onPress={ () => navigation.navigate("CartList")}/>
     <Text>{cartStore.totalQuantity}</Text>
     </Button>
       

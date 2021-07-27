@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/Cellar/node/16.3.0/bin/node /usr/local/bin/yarn add …
+  /usr/local/Cellar/node/16.3.0/bin/node /usr/local/bin/yarn add RootNavigator
 
 PATH: 
   /Library/Frameworks/Python.framework/Versions/3.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Library/Frameworks/Python.framework/Versions/3.7/bin
@@ -14,15 +14,17 @@ Platform:
   darwin x64
 
 Trace: 
-  TypeError [ERR_UNESCAPED_CHARACTERS]: Request path contains unescaped characters
-      at new NodeError (node:internal/errors:363:5)
-      at new ClientRequest (node:_http_client:154:13)
-      at Object.request (node:https:357:10)
-      at Request.module.exports.Request.start (/usr/local/lib/node_modules/yarn/lib/cli.js:141224:32)
-      at Request.module.exports.Request.end (/usr/local/lib/node_modules/yarn/lib/cli.js:141983:10)
-      at end (/usr/local/lib/node_modules/yarn/lib/cli.js:141037:14)
-      at Immediate._onImmediate (/usr/local/lib/node_modules/yarn/lib/cli.js:141051:7)
-      at processImmediate (node:internal/timers:464:21)
+  Error: https://registry.yarnpkg.com/RootNavigator: Not found
+      at Request.params.callback [as _callback] (/usr/local/lib/node_modules/yarn/lib/cli.js:66988:18)
+      at Request.self.callback (/usr/local/lib/node_modules/yarn/lib/cli.js:140662:22)
+      at Request.emit (node:events:394:28)
+      at Request.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:141634:10)
+      at Request.emit (node:events:394:28)
+      at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:141556:12)
+      at Object.onceWrapper (node:events:513:28)
+      at IncomingMessage.emit (node:events:406:35)
+      at endReadableNT (node:internal/streams/readable:1329:12)
+      at processTicksAndRejections (node:internal/process/task_queues:83:21)
 
 npm manifest: 
   {
