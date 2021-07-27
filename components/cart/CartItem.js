@@ -2,7 +2,7 @@ import {List} from "native-base";
 import {Text} from "react-native";
 import React from 'react';
 
-import { TotalPrice } from "./styles";
+import { TotalPrice, TrashIcon } from "./styles";
 
 const CartItem = ({item}) => {
     // console.log(item);
@@ -12,6 +12,7 @@ const CartItem = ({item}) => {
             <Text>{item.name}  </Text>
             <Text>  {item.price} x {item.quantity}</Text>
             <TotalPrice>{+item.price * +item.quantity}</TotalPrice>
+            <TrashIcon name="trash" size={24}/>
         </List.Item>
     )
 }
