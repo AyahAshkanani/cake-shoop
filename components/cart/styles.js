@@ -14,6 +14,12 @@ export const CartButtonStyled = styled(Entypo)`
 padding-left: -50px;
 `;
 
+export const CartTextStyled = styled.Text`
+  ${'' /* color: ${(props) => props.theme.white}; */}
+  font-size: 14px;
+`;
+
+
 export const TrashIcon = styled(FontAwesome)`
   color: ${(props) => props.theme.red};
 `;

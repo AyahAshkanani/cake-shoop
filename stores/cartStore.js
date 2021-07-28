@@ -1,7 +1,10 @@
 
 import { makeAutoObservable } from "mobx";
+
 // import { AsyncStorage } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+
+//instance import
 import instance from "./instance";
 
 
@@ -33,6 +36,8 @@ class CartStore {
     this.items = this.items.filter((item) => item.cakeId !== itemId);
     await AsyncStorage.setItem("cart", JSON.stringify(this.items));
   };
+
+  //have an error here because of items
 
   checkout = async () => {
     try {

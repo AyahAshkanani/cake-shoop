@@ -9,8 +9,7 @@ import cartStore from "../../stores/cartStore";
 import { TotalPrice, TrashIcon } from "./styles"
 
 const CartItem = ({item}) => {
-    // console.log(item);
-    // console.log(item.name);
+
     return (
         <List.Item>
             <Text>{item.name}  </Text>
